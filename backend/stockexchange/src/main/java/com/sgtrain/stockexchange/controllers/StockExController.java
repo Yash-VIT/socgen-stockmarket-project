@@ -3,6 +3,7 @@ package com.sgtrain.stockexchange.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,16 +23,16 @@ public class StockExController {
 	@Autowired
 	StockExService exService;
 	
-	@GetMapping("/get")
+	@GetMapping("/exchanges")
 	@ApiOperation(value = "Get Value of Stock Exchange")
-	public List<StockEx> getExchange(StockEx ex) {
-		return exService.getStockEx() ;
+	public ResponseEntity<List<StockEx>> getExchange(StockEx ex) {
+		return ResponseEntity.ok(exService.getStockEx()) ;
 	}
 	
-	@PostMapping("/save")
+	@PostMapping("/add")
 	@ApiOperation(value = "Create New Stock Exchange")
-	public StockExResponse createExchange(@RequestBody StockEx ex) {
-		return exService.createStockEx(ex);
+	public ResponseEntity<StockExResponse> createExchange(@RequestBody StockEx ex) {
+		return ResponseEntity.ok(exService.createStockEx(ex));
 	}
 	
 
