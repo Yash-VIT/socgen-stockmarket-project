@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sgtrain.stockexchange.entities.StockEx;
+import com.sgtrain.stockexchange.entities.StockExResponse;
 import com.sgtrain.stockexchange.services.StockExService;
 
 import io.swagger.annotations.ApiOperation;
@@ -29,7 +30,7 @@ public class StockExController {
 	
 	@PostMapping("/save")
 	@ApiOperation(value = "Create New Stock Exchange")
-	public boolean createExchange(@RequestBody StockEx ex) {
+	public StockExResponse createExchange(@RequestBody StockEx ex) {
 		return exService.createStockEx(ex);
 	}
 	

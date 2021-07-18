@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 import com.sgtrain.stockexchange.entities.StockEx;
 import com.sgtrain.stockexchange.entities.StockExRepository;
+import com.sgtrain.stockexchange.entities.StockExResponse;
 import com.sgtrain.stockexchange.entities.model.AddressRepository;
-import com.sgtrain.stockexchange.entities.model.StockExAddress;
 
 @Component
 public class StockExService {
@@ -23,9 +23,13 @@ public class StockExService {
 		return exRepository.findAll();
 	}
 	
-	public boolean createStockEx(StockEx ex) {
+	public StockExResponse createStockEx(StockEx ex) {
+		StockExResponse exResponse = new StockExResponse();
 		exRepository.save(ex);
-		return true;
+		exResponse.setStatus(true);
+		exResponse.setMessage("Stock Exchange Added successfully");
+		exResponse.setError(null);
+		return exResponse;
 	}
 	
 

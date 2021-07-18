@@ -30,7 +30,7 @@ public class StockExchangeApplication {
 	private ApiInfo apiDetails() {
 		return new ApiInfo(
 				"Stock Exchange API",
-				"API Documentation for Stock Exchange",
+				"API Documentation for Stock Exchange Application",
 				"1.0",
 				"Free to Use",
 				new springfox.documentation.service.Contact("Yash Raj", "https://github.com/Yash-VIT/socgen-stockmarket-project", "yashrajgithub@gmail.com"),
