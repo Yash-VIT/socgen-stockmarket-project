@@ -1,4 +1,4 @@
-package com.sgtrain.stockexchange.entities;
+package com.sgtrain.stockexchange.response;
 
 import lombok.Data;
 

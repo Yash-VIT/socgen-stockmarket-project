@@ -1,4 +1,4 @@
-package com.sgtrain.stockexchange.entities.model;
+package com.sgtrain.stockexchange.dto.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.sgtrain.stockexchange.entities.StockEx;
+import com.sgtrain.stockexchange.dto.StockEx;
 
 import lombok.Data;
 

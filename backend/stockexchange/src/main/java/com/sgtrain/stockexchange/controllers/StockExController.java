@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sgtrain.stockexchange.entities.StockEx;
-import com.sgtrain.stockexchange.entities.StockExResponse;
+import com.sgtrain.stockexchange.dto.StockEx;
+import com.sgtrain.stockexchange.response.StockExResponse;
 import com.sgtrain.stockexchange.services.StockExService;
 
 import io.swagger.annotations.ApiOperation;
@@ -28,6 +28,8 @@ public class StockExController {
 	public ResponseEntity<List<StockEx>> getExchange(StockEx ex) {
 		return ResponseEntity.ok(exService.getStockEx()) ;
 	}
+	
+	
 	
 	@PostMapping("/add")
 	@ApiOperation(value = "Create New Stock Exchange")
