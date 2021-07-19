@@ -10,22 +10,9 @@ import com.sgtrain.stockexchange.dao.model.AddressRepository;
 import com.sgtrain.stockexchange.dto.StockEx;
 import com.sgtrain.stockexchange.response.StockExResponse;
 
-@Component
-public class StockExService {
+public interface StockExService {
 	
-	@Autowired
-	StockExServiceImpl exRepositoryImpl;
+	public List<StockEx> getStockEx();
+	public StockExResponse createStockEx(StockEx ex);
 	
-	@Autowired
-	AddressRepository addressRepository;
-	
-	public List<StockEx> getStockEx(){
-		return exRepositoryImpl.getStockEx();
-	}
-	
-	public StockExResponse createStockEx(StockEx ex) {
-		return exRepositoryImpl.createStockEx(ex);
-	}
-	
-
 }

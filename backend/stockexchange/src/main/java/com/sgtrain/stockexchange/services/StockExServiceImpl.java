@@ -4,13 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.sgtrain.stockexchange.dao.StockExRepository;
 import com.sgtrain.stockexchange.dto.StockEx;
 import com.sgtrain.stockexchange.response.StockExResponse;
 
-@Component
-public class StockExServiceImpl {
+@Service
+public class StockExServiceImpl implements StockExService{
 	
 	@Autowired
 	StockExRepository exRepository;
