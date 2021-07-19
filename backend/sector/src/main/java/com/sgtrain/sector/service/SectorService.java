@@ -1,4 +1,4 @@
-package com.sgtrain.service;
+package com.sgtrain.sector.service;
 
 import java.util.List;
 import java.util.Optional;

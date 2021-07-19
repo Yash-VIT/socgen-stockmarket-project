@@ -1,4 +1,4 @@
-package com.sgtrain.controller;
+package com.sgtrain.sector.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sgtrain.sector.dto.SectorDto;
-import com.sgtrain.service.SectorService;
+import com.sgtrain.sector.service.SectorService;
 
 import io.swagger.annotations.ApiOperation;
 
