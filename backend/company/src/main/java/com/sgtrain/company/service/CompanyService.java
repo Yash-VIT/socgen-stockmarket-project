@@ -9,7 +9,7 @@ public interface CompanyService {
 	public boolean createCompany(CompanyDao companyDao);
 	public Iterable<CompanyDao> getCompany();
 	public Optional<CompanyDao> getCompanyById(String id);
-	public boolean editCompany(CompanyDao companyDao);
 	public boolean deleteCompany(String id);
+	public boolean editCompany(String id, CompanyDao companyDao);
 
 }

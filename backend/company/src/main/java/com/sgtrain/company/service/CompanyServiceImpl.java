@@ -27,7 +27,22 @@ public class CompanyServiceImpl implements CompanyService{
 		return companyRepository.findById(id);
 	}
 	
-	public boolean editCompany(CompanyDao companyDao) {
+	public boolean editCompany(String id, CompanyDao companyDao) {
+		
+		Optional<CompanyDao> companyOptional = companyRepository.findById(id);
+		if(companyOptional!= null) {
+			CompanyDao newCompanyDao = companyOptional.get();	
+			newCompanyDao.setCompanyName(companyDao.getCompanyName());
+			newCompanyDao.setTurnover(companyDao.getTurnover());
+			newCompanyDao.setCeo(companyDao.getCeo());
+			newCompanyDao.setExchangeListing(companyDao.isExchangeListing());
+			newCompanyDao.setSector(companyDao.getSector());
+			newCompanyDao.setWriteup(companyDao.getWriteup());
+			newCompanyDao.setCompanyCode(companyDao.getCompanyCode());
+			companyRepository.save(newCompanyDao);
+			return true;
+		}
+		
 		companyRepository.save(companyDao);
 		return true;
 	}
