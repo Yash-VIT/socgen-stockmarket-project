@@ -1,4 +1,4 @@
-package com.sgtrain.company.dao;
+package com.sgtrain.company.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "company")
-public class CompanyDao {
+public class CompanyDto {
 	
 	@Id
 	String id;
@@ -25,4 +25,5 @@ public class CompanyDao {
 	String writeup;
 	String companyCode;
 
+	
 }
