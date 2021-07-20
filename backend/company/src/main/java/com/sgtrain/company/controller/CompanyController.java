@@ -17,23 +17,22 @@ import com.sgtrain.company.dao.CompanyDao;
 import com.sgtrain.company.service.CompanyService;
 
 @RestController
-@RequestMapping("/company")
 public class CompanyController {
 
 	@Autowired
 	CompanyService companyService;
 	
-	@PostMapping("/add")
+	@PostMapping("/company")
 	public boolean createCompany(@RequestBody CompanyDao companyDao) {
 		return companyService.createCompany(companyDao);
 	}
 	
-	@GetMapping("/display")
+	@GetMapping("/company")
 	public ResponseEntity<Iterable<CompanyDao>> getCompany(){
 		return ResponseEntity.ok(companyService.getCompany());
 	}
 	
-	@GetMapping("/display/{id}")
+	@GetMapping("/company/{id}")
 	public ResponseEntity getCompanyById(@PathVariable String id){
 		
 		Optional<CompanyDao> optional = companyService.getCompanyById(id);
@@ -45,7 +44,7 @@ public class CompanyController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Company with id "+ id+" not found.");
 	}
 	
-	@DeleteMapping("delete/{id}")
+	@DeleteMapping("/company/{id}")
 	public boolean deleteCompany(@PathVariable String id) {
 		return companyService.deleteCompany(id);
 	}

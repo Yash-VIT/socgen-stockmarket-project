@@ -30,9 +30,9 @@ public class CompanyApplication {
 	private ApiInfo apiDetails() {
 		return new ApiInfo(
 				"Company Microservice API",
-				"API Documentation for Company Application",
+				"API Documentation for Company Microservice",
 				"1.0",
-				"Free to Use",
+				"Copyright- Yash Raj",
 				new springfox.documentation.service.Contact("Yash Raj", "https://github.com/Yash-VIT/socgen-stockmarket-project", "yashrajgithub@gmail.com"),
 				"API License",
 				"https://github.com/Yash-VIT/socgen-stockmarket-project",

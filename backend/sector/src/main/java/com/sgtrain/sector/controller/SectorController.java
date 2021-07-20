@@ -19,25 +19,24 @@ import com.sgtrain.sector.service.SectorService;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/sector")
 public class SectorController {
 	
 	@Autowired
 	SectorService sectorService;
 	
-	@PostMapping("/create")
+	@PostMapping("/sector")
 	@ApiOperation(value = "Create Sector")
 	public ResponseEntity<Boolean> createSector(@RequestBody SectorDto sectorDto) {
 		return  ResponseEntity.ok(sectorService.createSector(sectorDto));
 	}
 	
-	@GetMapping("/display")
+	@GetMapping("/sector")
 	@ApiOperation(value = "Get All Sector Value")
 	public ResponseEntity<Iterable<SectorDto>> findSector(){
 		return  ResponseEntity.ok(sectorService.findSector());
 	}
 	
-	@GetMapping("/display/{id}")
+	@GetMapping("/sector/{id}")
 	@ApiOperation(value = "Get Sector By ID")
 	public ResponseEntity findSectorById(@PathVariable String id){
 		
@@ -49,7 +48,7 @@ public class SectorController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Sector with id "+ id+" not found.");
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/sector/{id}")
 	@ApiOperation(value = "Delete Sector By ID")
 	public ResponseEntity<Boolean> deleteSectorById(@PathVariable String id) throws Exception{
 		return ResponseEntity.ok(sectorService.deleteSectorById(id));

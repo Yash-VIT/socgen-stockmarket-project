@@ -32,7 +32,7 @@ public class SectorApplication {
 				"Sector Microservice API",
 				"API Documentation for Sector Application",
 				"1.0",
-				"Free to Use",
+				"Copyright- Yash Raj",
 				new springfox.documentation.service.Contact("Yash Raj", "https://github.com/Yash-VIT/socgen-stockmarket-project", "yashrajgithub@gmail.com"),
 				"API License",
 				"https://github.com/Yash-VIT/socgen-stockmarket-project",
