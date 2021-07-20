@@ -1,8 +1,6 @@
-package com.sgtrain.sector.dto;
+package com.sgtrain.stockexchange.dto;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -26,4 +24,5 @@ public class CompanyDto {
 	String sector;
 	String writeup;
 	String companyCode;
+
 }

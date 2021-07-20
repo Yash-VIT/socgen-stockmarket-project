@@ -16,7 +16,6 @@ import lombok.Data;
 @Table(name="address")
 public class StockExAddress {
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	@Column(name = "id")
 	private int id;

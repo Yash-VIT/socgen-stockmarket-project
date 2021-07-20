@@ -20,12 +20,17 @@ public class SectorServiceImpl implements SectorService{
 		return true;
 	}
 	
-	public List<SectorDto> findSector() {
+	public Iterable<SectorDto> findSector() {
 		return sectorRepository.findAll();	
 	}
 	
-	public Optional<SectorDto> findSectorById(int id){
+	public Optional<SectorDto> findSectorById(String id){
 		return sectorRepository.findById(id);
+	}
+	
+	public boolean deleteSectorById(String id) {
+		sectorRepository.deleteById(id);
+		return true;
 	}
 
 }

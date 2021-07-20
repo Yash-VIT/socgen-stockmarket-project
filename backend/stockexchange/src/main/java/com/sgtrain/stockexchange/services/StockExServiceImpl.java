@@ -1,6 +1,7 @@
 package com.sgtrain.stockexchange.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ public class StockExServiceImpl implements StockExService{
 	@Autowired
 	StockExRepository exRepository;
 	
-	public List<StockEx> getStockEx(){
+	public Iterable<StockEx> getStockEx(){
 		return exRepository.findAll();
 	}
 	
@@ -27,6 +28,15 @@ public class StockExServiceImpl implements StockExService{
 		exResponse.setMessage("Stock Exchange Added successfully");
 		exResponse.setError(null);
 		return exResponse;
+	}
+	
+	public Optional<StockEx> getStockExById(int id){
+		return exRepository.findById(id);
+	}
+	
+	public boolean deleteStockExById(int id) {
+		exRepository.deleteById(id);
+		return true;
 	}
 
 }

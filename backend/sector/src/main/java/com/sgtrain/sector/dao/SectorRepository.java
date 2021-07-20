@@ -1,9 +1,9 @@
 package com.sgtrain.sector.dao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.sgtrain.sector.dto.SectorDto;
 
-public interface SectorRepository extends JpaRepository<SectorDto, Integer>{
+public interface SectorRepository extends CrudRepository<SectorDto, String>{
 
 }

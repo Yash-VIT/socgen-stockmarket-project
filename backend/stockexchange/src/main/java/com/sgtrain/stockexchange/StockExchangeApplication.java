@@ -29,7 +29,7 @@ public class StockExchangeApplication {
 	
 	private ApiInfo apiDetails() {
 		return new ApiInfo(
-				"Stock Exchange API",
+				"Stock Exchange Microservice API",
 				"API Documentation for Stock Exchange Application",
 				"1.0",
 				"Free to Use",
