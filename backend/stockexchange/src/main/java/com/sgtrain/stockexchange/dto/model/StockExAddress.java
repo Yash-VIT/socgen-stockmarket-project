@@ -1,13 +1,11 @@
-package com.sgtrain.stockexchange.entities.model;
+package com.sgtrain.stockexchange.dto.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.sgtrain.stockexchange.entities.StockEx;
+import com.sgtrain.stockexchange.dto.StockEx;
 
 import lombok.Data;
 
@@ -16,7 +14,6 @@ import lombok.Data;
 @Table(name="address")
 public class StockExAddress {
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	@Column(name = "id")
 	private int id;

@@ -1,4 +1,4 @@
-package com.sgtrain.stockexchange;
+package com.sgtrain.sector;
 
 import java.util.Collections;
 
@@ -14,23 +14,23 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class StockExchangeApplication {
+public class SectorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StockExchangeApplication.class, args);
+		SpringApplication.run(SectorApplication.class, args);
 	}
 	
 	@Bean
 	   public Docket productApi() {
 	      return new Docket(DocumentationType.SWAGGER_2).select()
-	         .apis(RequestHandlerSelectors.basePackage("com.sgtrain.stockexchange")).build()
+	         .apis(RequestHandlerSelectors.basePackage("com.sgtrain.sector")).build()
 	         .apiInfo(apiDetails());
 	   }
 	
 	private ApiInfo apiDetails() {
 		return new ApiInfo(
-				"Stock Exchange Microservice API",
-				"API Documentation for Stock Exchange Application",
+				"Sector Microservice API",
+				"API Documentation for Sector Application",
 				"1.0",
 				"Copyright- Yash Raj",
 				new springfox.documentation.service.Contact("Yash Raj", "https://github.com/Yash-VIT/socgen-stockmarket-project", "yashrajgithub@gmail.com"),
