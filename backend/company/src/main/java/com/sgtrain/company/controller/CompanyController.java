@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sgtrain.company.dao.CompanyDao;
+import com.sgtrain.company.dto.CompanyDto;
 import com.sgtrain.company.service.CompanyService;
 
 @RestController
@@ -23,19 +23,19 @@ public class CompanyController {
 	CompanyService companyService;
 	
 	@PostMapping("/company")
-	public boolean createCompany(@RequestBody CompanyDao companyDao) {
-		return companyService.createCompany(companyDao);
+	public boolean createCompany(@RequestBody CompanyDto companyDto) {
+		return companyService.createCompany(companyDto);
 	}
 	
 	@GetMapping("/company")
-	public ResponseEntity<Iterable<CompanyDao>> getCompany(){
+	public ResponseEntity<Iterable<CompanyDto>> getCompany(){
 		return ResponseEntity.ok(companyService.getCompany());
 	}
 	
 	@GetMapping("/company/{id}")
 	public ResponseEntity getCompanyById(@PathVariable String id){
 		
-		Optional<CompanyDao> optional = companyService.getCompanyById(id);
+		Optional<CompanyDto> optional = companyService.getCompanyById(id);
 		
 		if(optional.isPresent()) {
 			return  ResponseEntity.ok(optional.get());
@@ -45,13 +45,15 @@ public class CompanyController {
 	}
 	
 	@DeleteMapping("/company/{id}")
-	public boolean deleteCompany(@PathVariable String id) {
-		return companyService.deleteCompany(id);
+	public ResponseEntity<Boolean> deleteCompany(@PathVariable String id) {
+		return ResponseEntity.ok(companyService.deleteCompany(id));
 	}
 	
 	@PutMapping("/company/editCompany/{id}")
-	public boolean editCompany(@PathVariable String id, @RequestBody CompanyDao companyDao) {
-		return companyService.editCompany(id, companyDao);
+	public ResponseEntity editCompany(@PathVariable String id, @RequestBody CompanyDto companyDto) {
+		CompanyDto result = companyService.editCompany(id, companyDto);
+		System.out.println(result);
+		return (result!=null)?ResponseEntity.ok(true):ResponseEntity.status(HttpStatus.NOT_FOUND).body("Company with id "+ id+" not found.");
 	}
 	
 }

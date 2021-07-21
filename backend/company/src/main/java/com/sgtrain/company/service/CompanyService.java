@@ -2,14 +2,14 @@ package com.sgtrain.company.service;
 
 import java.util.Optional;
 
-import com.sgtrain.company.dao.CompanyDao;
+import com.sgtrain.company.dto.CompanyDto;
 
 public interface CompanyService {
 	
-	public boolean createCompany(CompanyDao companyDao);
-	public Iterable<CompanyDao> getCompany();
-	public Optional<CompanyDao> getCompanyById(String id);
+	public boolean createCompany(CompanyDto companyDto);
+	public Iterable<CompanyDto> getCompany();
+	public Optional<CompanyDto> getCompanyById(String id);
 	public boolean deleteCompany(String id);
-	public boolean editCompany(String id, CompanyDao companyDao);
+	public CompanyDto editCompany(String id, CompanyDto companyDto);
 
 }

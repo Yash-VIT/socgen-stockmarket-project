@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sgtrain.company.dao.CompanyDao;
-import com.sgtrain.company.dto.CompanyRepository;
+import com.sgtrain.company.dao.CompanyRepository;
+import com.sgtrain.company.dto.CompanyDto;
 
 @Service
 public class CompanyServiceImpl implements CompanyService{
@@ -14,37 +14,36 @@ public class CompanyServiceImpl implements CompanyService{
 	@Autowired
 	CompanyRepository companyRepository;
 	
-	public boolean createCompany(CompanyDao companyDao) {
-		companyRepository.save(companyDao);
+	public boolean createCompany(CompanyDto companyDto) {
+		companyRepository.save(companyDto);
 		return  true;
 	}
 	
-	public Iterable<CompanyDao> getCompany(){
+	public Iterable<CompanyDto> getCompany(){
 		return companyRepository.findAll();
 	}
 	
-	public Optional<CompanyDao> getCompanyById(String id) {
+	public Optional<CompanyDto> getCompanyById(String id) {
 		return companyRepository.findById(id);
 	}
 	
-	public boolean editCompany(String id, CompanyDao companyDao) {
+	public CompanyDto editCompany(String id, CompanyDto companyDto) {
 		
-		Optional<CompanyDao> companyOptional = companyRepository.findById(id);
+		Optional<CompanyDto> companyOptional = companyRepository.findById(id);
 		if(companyOptional!= null) {
-			CompanyDao newCompanyDao = companyOptional.get();	
-			newCompanyDao.setCompanyName(companyDao.getCompanyName());
-			newCompanyDao.setTurnover(companyDao.getTurnover());
-			newCompanyDao.setCeo(companyDao.getCeo());
-			newCompanyDao.setExchangeListing(companyDao.isExchangeListing());
-			newCompanyDao.setSector(companyDao.getSector());
-			newCompanyDao.setWriteup(companyDao.getWriteup());
-			newCompanyDao.setCompanyCode(companyDao.getCompanyCode());
-			companyRepository.save(newCompanyDao);
-			return true;
+			CompanyDto newCompanyDao = companyOptional.get();	
+			newCompanyDao.setCompanyName(companyDto.getCompanyName());
+			newCompanyDao.setTurnover(companyDto.getTurnover());
+			newCompanyDao.setCeo(companyDto.getCeo());
+			newCompanyDao.setExchangeListing(companyDto.isExchangeListing());
+			newCompanyDao.setSector(companyDto.getSector());
+			newCompanyDao.setWriteup(companyDto.getWriteup());
+			newCompanyDao.setCompanyCode(companyDto.getCompanyCode());
+			return companyRepository.save(newCompanyDao);
+			
 		}
 		
-		companyRepository.save(companyDao);
-		return true;
+		return null;
 	}
 	
 	public boolean deleteCompany(String id) {
