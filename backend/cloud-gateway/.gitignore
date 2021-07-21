@@ -19,6 +19,10 @@ target/
 *.iml
 *.ipr
 
+backend/*-service/.mvn/
+backend/*-service/mvnw
+backend/*-service/mvnw.cmd
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sgtrain.company.dto.IpoDto;
 import com.sgtrain.company.service.IpoService;
 
 @RestController
+@RequestMapping("/company")
 public class ipoController {
 	
 	@Autowired
@@ -47,7 +49,7 @@ public class ipoController {
 		return ResponseEntity.ok(ipoService.deleteIpo(id));
 	}
 	
-	@GetMapping("ipo/company/{companyId}")
+	@GetMapping("/ipo/company/{companyId}")
 	public IpoDto getIpoByCompanyId(@PathVariable(value="companyId") String id) {
 		return ipoService.getIpoByCompanyId(id);
 	}
