@@ -33,6 +33,6 @@ public class IpoServiceImpl implements IpoService{
 	}
 	
 	public IpoDto getIpoByCompanyId(String id) {
-		return ipoRepository.findIpoByCompanyId(id);
+		return ipoRepository.findIpoByCompanyDtoId(id);
 	}
 }

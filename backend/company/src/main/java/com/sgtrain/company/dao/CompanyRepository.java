@@ -1,9 +1,9 @@
 package com.sgtrain.company.dao;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.sgtrain.company.dto.CompanyDto;
 
-public interface CompanyRepository extends CrudRepository<CompanyDto, String>{
+public interface CompanyRepository extends JpaRepository<CompanyDto, String>{
 
 }
