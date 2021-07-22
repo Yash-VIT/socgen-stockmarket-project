@@ -22,17 +22,17 @@ public class CompanyController {
 	@Autowired
 	CompanyService companyService;
 	
-	@PostMapping("/company")
+	@PostMapping("/company/create")
 	public boolean createCompany(@RequestBody CompanyDto companyDto) {
 		return companyService.createCompany(companyDto);
 	}
 	
-	@GetMapping("/company")
+	@GetMapping("/company/display")
 	public ResponseEntity<Iterable<CompanyDto>> getCompany(){
 		return ResponseEntity.ok(companyService.getCompany());
 	}
 	
-	@GetMapping("/company/{id}")
+	@GetMapping("/company/display/{id}")
 	public ResponseEntity getCompanyById(@PathVariable String id){
 		
 		Optional<CompanyDto> optional = companyService.getCompanyById(id);
@@ -44,7 +44,7 @@ public class CompanyController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Company with id "+ id+" not found.");
 	}
 	
-	@DeleteMapping("/company/{id}")
+	@DeleteMapping("/company/remove/{id}")
 	public ResponseEntity<Boolean> deleteCompany(@PathVariable String id) {
 		return ResponseEntity.ok(companyService.deleteCompany(id));
 	}

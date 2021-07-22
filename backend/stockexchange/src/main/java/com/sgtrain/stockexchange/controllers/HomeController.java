@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 public class HomeController {
 
-	@GetMapping(path="/stock/home")
+	@GetMapping(path="/stockex/home")
 	@ApiOperation(value = "Welcome Page")
 	public String print() {
 		return "Welcome User!";
