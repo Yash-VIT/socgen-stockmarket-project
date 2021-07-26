@@ -4,6 +4,7 @@ import { CompanyListComponent } from './components/company-list/company-list.com
 import { CreateCompanyComponent } from './components/create-company/create-company/create-company.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { IpoListComponent } from './components/ipo-list/ipo-list.component';
+import { SectorListComponent } from './components/sector-list/sector-list/sector-list.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: 'company/display', component: CompanyListComponent},
   {path: 'company/create', component: CreateCompanyComponent},
-  {path: 'company/ipo', component: IpoListComponent}
+  {path: 'company/ipo', component: IpoListComponent},
+  {path: 'sector', component: SectorListComponent}
 ];
 
 @NgModule({

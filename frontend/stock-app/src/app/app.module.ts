@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import { CreateCompanyComponent } from './components/create-company/create-company/create-company.component';
 import { FormsModule } from '@angular/forms';
 import { IpoListComponent } from './components/ipo-list/ipo-list.component';
+import { SectorListComponent } from './components/sector-list/sector-list/sector-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { IpoListComponent } from './components/ipo-list/ipo-list.component';
     CompanyListComponent,
     HomeComponent,
     CreateCompanyComponent,
-    IpoListComponent
+    IpoListComponent,
+    SectorListComponent
   ],
   imports: [
     BrowserModule,

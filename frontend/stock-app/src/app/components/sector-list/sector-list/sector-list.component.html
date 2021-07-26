@@ -1,19 +1,15 @@
-<h2>IPO Listing</h2><br>
+<h2>Sectors</h2><br>
 <table class="table table-striped ">
     <thead class="thead-dark">
-        <th>IPO ID</th>
-        <th>IPO Price</th>
-        <th>Number of Shares</th>
-        <th>Date</th>
-        <th>remarks</th>
+        <th>Sector ID</th>
+        <th>Sector Name</th>
+        <th>Sector Brief</th>
     </thead>
     <tbody>
-        <tr *ngFor="let ipo of ipoDto">
-            <td>{{ipo.id}}</td>
-            <td>{{ipo.ipoPrice}}</td>
-            <td>{{ipo.numberOfShares}}</td>
-            <td>{{ipo.date}}</td>
-            <td>{{ipo.remarks}}</td>
+        <tr *ngFor="let sector of sectorDto">
+            <td>{{sector.id}}</td>
+            <td>{{sector.name}}</td>
+            <td>{{sector.brief}}</td>
         </tr>
     </tbody>
 </table>
