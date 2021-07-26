@@ -24,6 +24,7 @@ public class CompanyController {
 	@Autowired
 	CompanyService companyService;
 	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/company/create")
 	public boolean createCompany(@RequestBody CompanyDto companyDto) {
 		return companyService.createCompany(companyDto);

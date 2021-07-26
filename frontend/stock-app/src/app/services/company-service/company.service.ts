@@ -9,6 +9,7 @@ import { CompanyDto } from 'src/app/models/company/company-dto';
 export class CompanyService {
 
   baseUrl ='http://localhost:8080/company/display';
+  createCompanyUrl ='http://localhost:8080/company/create';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,5 +17,10 @@ export class CompanyService {
     console.log( this.httpClient.get<CompanyDto[]>(`${this.baseUrl}`));
     return this.httpClient.get<CompanyDto[]>(`${this.baseUrl}`);
   }
+
+  createCompany(companyDto: CompanyDto): Observable<Object> {
+    return this.httpClient.post(`${this.createCompanyUrl}`, companyDto);
+  }
+
 
 }
