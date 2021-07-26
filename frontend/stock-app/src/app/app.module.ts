@@ -7,13 +7,15 @@ import { CompanyListComponent } from './components/company-list/company-list.com
 import { HomeComponent } from './components/home/home/home.component';
 import { CreateCompanyComponent } from './components/create-company/create-company/create-company.component';
 import { FormsModule } from '@angular/forms';
+import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyListComponent,
     HomeComponent,
-    CreateCompanyComponent
+    CreateCompanyComponent,
+    IpoListComponent
   ],
   imports: [
     BrowserModule,
