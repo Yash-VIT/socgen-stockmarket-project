@@ -1,6 +1,6 @@
 export class CompanyDto {
     id: String;
-    companyNamye :String;
+    companyName :String;
     turnover: number;
 	ceo: String;
 	exchangeListing: boolean;
