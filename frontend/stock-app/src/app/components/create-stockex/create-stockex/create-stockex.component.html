@@ -1,0 +1,51 @@
+<div class="col-md-6 offset-md-3">
+
+    <h2>Add New Stock Exchange</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+            
+        <table class="container">
+            <tr>
+                <td>
+        <div class="form-group" id="left">
+            <label>Stockex Id</label>
+            <input type="number" class="form-control" id="id" [(ngModel)]="stockex.id" name="id" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Exchange Name</label>
+            <input type="text" class="form-control" id="exName" [(ngModel)]="stockex.exchangeName" name="exName" required>
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            <label>Brief</label>
+            <input type="text" class="form-control" id="brief" [(ngModel)]="stockex.brief" name="brief">
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Remarks</label>
+            <input type="text" class="form-control" id="remarks" [(ngModel)]="stockex.remarks" name="remarks">
+        </div>
+    </td>
+
+    <td>
+        <div class="form-group" id="right">
+            <label>Exchange ID</label>
+            <input type="text" class="form-control" id="exgId" [(ngModel)]="stockex.exgId" name="exgId">
+        </div>
+    </td>
+    
+    </tr>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </table>
+    </fieldset>
+    </form>
+

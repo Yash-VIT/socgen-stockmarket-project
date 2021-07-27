@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CompanyListComponent } from './components/company-list/company-list.component';
 import { CreateCompanyComponent } from './components/create-company/create-company/create-company.component';
+import { CreateIpoComponent } from './components/create-ipo/create-ipo/create-ipo.component';
+import { CreateSectorComponent } from './components/create-sector/create-sector/create-sector.component';
+import { CreateStockComponent } from './components/create-stock/create-stock/create-stock.component';
+import { CreateStockexComponent } from './components/create-stockex/create-stockex/create-stockex.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 import { SectorListComponent } from './components/sector-list/sector-list/sector-list.component';
@@ -18,8 +22,12 @@ const routes: Routes = [
   {path: 'company/ipo', component: IpoListComponent},
   {path: 'sector', component: SectorListComponent},
   {path: 'stockex', component: StockexListComponent},
+  {path: 'stockex/create', component: CreateStockexComponent},
   {path: 'company/editCompany/:id', component: UpdateCompanyComponent},
-  {path: 'company/stocks', component: StockListComponent}
+  {path: 'company/stocks', component: StockListComponent},
+  {path: 'company/createIpo', component: CreateIpoComponent},
+  {path: 'sector/createSector', component: CreateSectorComponent},
+  {path: 'company/createStocks', component: CreateStockComponent},
 ];
 
 @NgModule({

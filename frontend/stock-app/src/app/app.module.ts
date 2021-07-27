@@ -14,6 +14,10 @@ import { UpdateCompanyComponent } from './components/update-company/update-compa
 import { UpdateSectorComponent } from './components/update-sector/update-sector/update-sector.component';
 import { UpdateStockexComponent } from './components/update-stockex/update-stockex/update-stockex.component';
 import { StockListComponent } from './components/stock-list/stock-list/stock-list.component';
+import { CreateIpoComponent } from './components/create-ipo/create-ipo/create-ipo.component';
+import { CreateSectorComponent } from './components/create-sector/create-sector/create-sector.component';
+import { CreateStockComponent } from './components/create-stock/create-stock/create-stock.component';
+import { CreateStockexComponent } from './components/create-stockex/create-stockex/create-stockex.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { StockListComponent } from './components/stock-list/stock-list/stock-lis
     UpdateCompanyComponent,
     UpdateSectorComponent,
     UpdateStockexComponent,
-    StockListComponent
+    StockListComponent,
+    CreateIpoComponent,
+    CreateSectorComponent,
+    CreateStockComponent,
+    CreateStockexComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,44 @@
+<div class="col-md-6 offset-md-3">
+
+    <h2>Add New Stock</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+            
+        <table class="container">
+            <tr>
+                <td>
+        <div class="form-group" id="left">
+            <label>Stock Id</label>
+            <input type="number" class="form-control" id="id" [(ngModel)]="stock.id" name="id" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <div class="form-group">
+            <label>Sector Code</label>
+            <input type="text" class="form-control" id="code" [(ngModel)]="stock.stockCode" name="code" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Price</label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="stock.price" name="price">
+        </div>
+    </td>
+    <td>
+        <div class="form-group" id="right">
+            <label>Date</label>
+            <input type="text" class="form-control" id="date" [(ngModel)]="stock.timestamp" name="date">
+        </div>
+    </td>
+    
+    </tr>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </table>
+    </fieldset>
+    </form>
+
