@@ -1,0 +1,28 @@
+<h2>Stock Exchange</h2><br>
+<table class="table table-striped ">
+    <thead class="thead-dark">
+        <th>Stockex ID</th>
+        <th>Stockex Name</th>
+        <th>Stockex Brief</th>
+        <th>Stockex Remarks</th>
+        <th>Exchange ID</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stockex of stockexDto">
+            <td>{{stockex.id}}</td>
+            <td>{{stockex.exchangeName}}</td>
+            <td>{{stockex.brief}}</td>
+            <td>{{stockex.remarks}}</td>
+            <td>{{stockex.exgId}}</td>
+        </tr>
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
