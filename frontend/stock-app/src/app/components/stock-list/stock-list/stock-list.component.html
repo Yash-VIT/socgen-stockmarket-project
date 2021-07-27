@@ -1,22 +1,21 @@
-<h2>IPO Listing</h2><br>
+<h2>Stocks</h2><br>
 <table class="table table-striped ">
     <thead class="thead-dark">
-        <th>IPO ID</th>
-        <th>IPO Price</th>
-        <th>Number of Shares</th>
+        <th>Stock ID</th>
+        <th>Stock Code</th>
+        <th>Stock Price</th>
         <th>Date</th>
-        <th>remarks</th>
         <th>Actions</th>
     </thead>
     <tbody>
-        <tr *ngFor="let ipo of ipoDto">
-            <td>{{ipo.id}}</td>
-            <td>{{ipo.ipoPrice}}</td>
-            <td>{{ipo.numberOfShares}}</td>
-            <td>{{ipo.date}}</td>
-            <td>{{ipo.remarks}}</td>
+        <tr *ngFor="let stockDto of stock">
+            <td>{{stockDto.id}}</td>
+            <td>{{stockDto.stockCode}}</td>
+            <td>{{stockDto.price}}</td>
+            <td>{{stockDto.timestamp}}</td>
             <td>
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-info">Update</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
             </td>
         </tr>
     </tbody>

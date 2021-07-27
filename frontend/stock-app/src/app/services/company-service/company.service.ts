@@ -18,13 +18,13 @@ export class CompanyService {
     return this.httpClient.get<CompanyDto[]>(`${this.baseUrl}`);
   }
 
-  createCompany(companyDto: CompanyDto): Observable<Object> {
+  createCompany(companyDto: CompanyDto): Observable<boolean> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json'
       })
     };
-    return this.httpClient.post(`${this.createCompanyUrl}`, companyDto, httpOptions);
+    return this.httpClient.post<boolean>(`${this.createCompanyUrl}`, companyDto, httpOptions);
   }
 
 

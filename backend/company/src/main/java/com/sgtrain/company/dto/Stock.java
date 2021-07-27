@@ -1,5 +1,7 @@
 package com.sgtrain.company.dto;
 
+import java.security.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,22 +19,28 @@ public class Stock {
 	@Column(name="stock_code")
 	private String stockCode;
 	
-	@ManyToOne
-	private CompanyDto company;
+	private double price;
 	
-	@ManyToOne
-	private StockExchange stockExchange;
+	private String timestamp;
+	
+//	@ManyToOne
+//	private CompanyDto company;
+	
+//	@ManyToOne
+//	private StockExchange stockExchange;
 
 	public Stock() {
 		super();
 	}
 
-	public Stock(int id, String stockCode, CompanyDto company, StockExchange stockExchange) {
+	public Stock(int id, String stockCode, double price, String timestamp) {
 		super();
 		this.id = id;
 		this.stockCode = stockCode;
-		this.company = company;
-		this.stockExchange = stockExchange;
+		this.price = price;
+		this.timestamp = timestamp;
+//		this.company = company;
+//		this.stockExchange = stockExchange;
 	}
 
 	public int getId() {
@@ -50,21 +58,37 @@ public class Stock {
 	public void setStockCode(String stockCode) {
 		this.stockCode = stockCode;
 	}
-
-	public CompanyDto getCompany() {
-		return company;
+	
+	public double getPrice() {
+		return price;
 	}
 
-	public void setCompany(CompanyDto company) {
-		this.company = company;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
-	public StockExchange getStockExchange() {
-		return stockExchange;
+	public String getTimestamp() {
+		return timestamp;
 	}
 
-	public void setStockExchange(StockExchange stockExchange) {
-		this.stockExchange = stockExchange;
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
 	}
+
+//	public CompanyDto getCompany() {
+//		return company;
+//	}
+//
+//	public void setCompany(CompanyDto company) {
+//		this.company = company;
+//	}
+//
+//	public StockExchange getStockExchange() {
+//		return stockExchange;
+//	}
+//
+//	public void setStockExchange(StockExchange stockExchange) {
+//		this.stockExchange = stockExchange;
+//	}
 	
 }

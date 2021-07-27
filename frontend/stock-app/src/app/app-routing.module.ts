@@ -5,6 +5,7 @@ import { CreateCompanyComponent } from './components/create-company/create-compa
 import { HomeComponent } from './components/home/home/home.component';
 import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 import { SectorListComponent } from './components/sector-list/sector-list/sector-list.component';
+import { StockListComponent } from './components/stock-list/stock-list/stock-list.component';
 import { StockexListComponent } from './components/stockex-list/stockex-list/stockex-list.component';
 import { UpdateCompanyComponent } from './components/update-company/update-company/update-company.component';
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'company/ipo', component: IpoListComponent},
   {path: 'sector', component: SectorListComponent},
   {path: 'stockex', component: StockexListComponent},
-  {path: 'company/editCompany/:id', component: UpdateCompanyComponent}
+  {path: 'company/editCompany/:id', component: UpdateCompanyComponent},
+  {path: 'company/stocks', component: StockListComponent}
 ];
 
 @NgModule({
