@@ -18,6 +18,8 @@ import { CreateIpoComponent } from './components/create-ipo/create-ipo/create-ip
 import { CreateSectorComponent } from './components/create-sector/create-sector/create-sector.component';
 import { CreateStockComponent } from './components/create-stock/create-stock/create-stock.component';
 import { CreateStockexComponent } from './components/create-stockex/create-stockex/create-stockex.component';
+import { UpdateStockComponent } from './components/update-stock/update-stock/update-stock.component';
+import { LoginComponent } from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CreateStockexComponent } from './components/create-stockex/create-stock
     CreateIpoComponent,
     CreateSectorComponent,
     CreateStockComponent,
-    CreateStockexComponent
+    CreateStockexComponent,
+    UpdateStockComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

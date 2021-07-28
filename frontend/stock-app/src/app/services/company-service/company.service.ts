@@ -10,6 +10,7 @@ export class CompanyService {
 
   baseUrl ='http://localhost:8080/company/display';
   createCompanyUrl ='http://localhost:9002/company/create';
+  deleteCompanyUrl ='http://localhost:9002/company/remove';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -25,6 +26,10 @@ export class CompanyService {
       })
     };
     return this.httpClient.post<boolean>(`${this.createCompanyUrl}`, companyDto, httpOptions);
+  }
+
+  deleteCompany(id: String): Observable<Object> {
+    return this.httpClient.delete(`${this.deleteCompanyUrl}/${id}`);
   }
 
 

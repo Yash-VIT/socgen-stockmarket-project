@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Sector } from 'src/app/models/sector/sector';
+import { SectorService } from 'src/app/services/sector-service/sector.service';
 
 @Component({
   selector: 'app-update-sector',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateSectorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sectorService: SectorService,
+    private router: Router) { }
+
+    sector: Sector = new Sector();
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    
   }
 
 }

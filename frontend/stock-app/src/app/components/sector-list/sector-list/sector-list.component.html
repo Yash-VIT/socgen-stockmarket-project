@@ -12,7 +12,7 @@
             <td>{{sector.name}}</td>
             <td>{{sector.brief}}</td>
             <td>
-                <button class="btn btn-info">Update</button>
+                <button (click)="updateSector(sector.id)" class="btn btn-info">Update</button>
                 <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
             </td>
         </tr>

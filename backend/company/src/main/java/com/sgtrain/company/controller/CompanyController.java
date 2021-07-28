@@ -19,7 +19,7 @@ import com.sgtrain.company.dto.CompanyDto;
 import com.sgtrain.company.service.CompanyService;
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CompanyController {
 
 	@Autowired
