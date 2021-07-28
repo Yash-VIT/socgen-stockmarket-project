@@ -6,6 +6,7 @@
         <th>Number of Shares</th>
         <th>Date</th>
         <th>remarks</th>
+        <th>Actions</th>
     </thead>
     <tbody>
         <tr *ngFor="let ipo of ipoDto">
@@ -14,6 +15,10 @@
             <td>{{ipo.numberOfShares}}</td>
             <td>{{ipo.date}}</td>
             <td>{{ipo.remarks}}</td>
+            <td>
+                <button class="btn btn-info">Update</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>

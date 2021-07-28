@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CompanyDto } from 'src/app/models/company/company-dto';
 import { CompanyService } from 'src/app/services/company-service/company.service';
 
@@ -11,7 +12,8 @@ export class CompanyListComponent implements OnInit {
 
   companyDto : CompanyDto[];
 
-  constructor(private companyService: CompanyService) { }
+  constructor(private companyService: CompanyService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getCompanyList();
@@ -21,6 +23,14 @@ export class CompanyListComponent implements OnInit {
     this.companyService.getCompanyList().subscribe((data) => {
       this.companyDto = data;
     })
+  }
+
+  updateCompany(id: String){
+    this.router.navigate(['company/editCompany', id]);
+  }
+
+  deleteCompany(id: String){
+    
   }
 
 }

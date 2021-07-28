@@ -6,6 +6,7 @@
         <th>Stockex Brief</th>
         <th>Stockex Remarks</th>
         <th>Exchange ID</th>
+        <th>Actions</th>
     </thead>
     <tbody>
         <tr *ngFor="let stockex of stockexDto">
@@ -14,6 +15,10 @@
             <td>{{stockex.brief}}</td>
             <td>{{stockex.remarks}}</td>
             <td>{{stockex.exgId}}</td>
+            <td>
+                <button class="btn btn-info">Update</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>

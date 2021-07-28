@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 import { SectorListComponent } from './components/sector-list/sector-list/sector-list.component';
 import { StockexListComponent } from './components/stockex-list/stockex-list/stockex-list.component';
+import { UpdateCompanyComponent } from './components/update-company/update-company/update-company.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StockexListComponent } from './components/stockex-list/stockex-list/sto
     CreateCompanyComponent,
     IpoListComponent,
     SectorListComponent,
-    StockexListComponent
+    StockexListComponent,
+    UpdateCompanyComponent
   ],
   imports: [
     BrowserModule,
