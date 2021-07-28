@@ -1,0 +1,50 @@
+<div class="col-md-6 offset-md-3">
+
+    <h2>Add New IPO</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+            
+        <table class="container">
+            <tr>
+                <td>
+        <div class="form-group" id="left">
+            <label>IPO Id</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="ipo.id" name="id" required>
+        </div>
+    </td>
+    <td>
+        <div class="form-group" id="left">
+            <label>IPO Price</label>
+            <input type="number" class="form-control" id="ipoPrice" [(ngModel)]="ipo.ipoPrice" name="ipoPrice" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Number of Shares</label>
+            <input type="number" class="form-control" id="shares" [(ngModel)]="ipo.numberOfShares" name="shares" required>
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            <label>Date</label>
+            <input type="text" class="form-control" id="date" [(ngModel)]="ipo.date" name="date">
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Remarks</label>
+            <input type="text" class="form-control" id="remarks" [(ngModel)]="ipo.remarks" name="remarks">
+        </div>
+    </td>
+    
+    </tr>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </table>
+    </fieldset>
+    </form>
+

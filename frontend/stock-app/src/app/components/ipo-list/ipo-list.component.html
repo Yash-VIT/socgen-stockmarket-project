@@ -1,0 +1,32 @@
+<h2>IPO Listing</h2><br>
+<table class="table table-striped ">
+    <thead class="thead-dark">
+        <th>IPO ID</th>
+        <th>IPO Price</th>
+        <th>Number of Shares</th>
+        <th>Date</th>
+        <th>remarks</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ipo of ipoDto">
+            <td>{{ipo.id}}</td>
+            <td>{{ipo.ipoPrice}}</td>
+            <td>{{ipo.numberOfShares}}</td>
+            <td>{{ipo.date}}</td>
+            <td>{{ipo.remarks}}</td>
+            <td>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>

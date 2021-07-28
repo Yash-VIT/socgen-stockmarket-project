@@ -1,0 +1,69 @@
+<div class="col-md-6 offset-md-3">
+
+    <h2>Add New Company</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+            
+        <table class="container">
+            <tr>
+                <td>
+        <div class="form-group" id="left">
+            <label>Comapny Id</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="companyDto.id" name="id" required>
+        </div>
+    </td>
+    <td>
+        <div class="form-group" id="left">
+            <label>Comapny Name</label>
+            <input type="text" class="form-control" id="companyName" [(ngModel)]="companyDto.companyName" name="companyName" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Turnover</label>
+            <input type="number" class="form-control" id="turnover" [(ngModel)]="companyDto.turnover" name="turnover" required>
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            <label>CEO</label>
+            <input type="text" class="form-control" id="ceo" [(ngModel)]="companyDto.ceo" name="ceo">
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Exchange Listing Status</label>
+            <input type="boolean" class="form-control" id="exchangeListing" [(ngModel)]="companyDto.exchangeListing" name="exchangeListing">
+        </div>
+    </td>
+    <td>
+        <div class="form-group">
+            <label>Sector</label>
+            <input type="text" class="form-control" id="sector" [(ngModel)]="companyDto.sector" name="sector">
+        </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <div class="form-group">
+            <label>Writeup</label>
+            <input type="text" class="form-control" id="writeup" [(ngModel)]="companyDto.writeup" name="writeup">
+        </div>
+    </td>
+    <td>
+        <div class="form-group" id="right">
+            <label>Company Code</label>
+            <input type="text" class="form-control" id="companyCode" name="companyCode"[(ngModel)]="companyDto.companyCode" required>
+        </div>
+    </td>
+    </tr>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </table>
+    </fieldset>
+    </form>
+

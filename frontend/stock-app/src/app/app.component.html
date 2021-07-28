@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
+    <ul class="navbar-nav" id="nav">
+        <li class="navbar-brand" id="left">
+            <a routerLink="home" routerLinkActive="active" >
+                <img src="assets/stock-prices.png" width="30" height="30" class="d-inline-block align-top" alt="HOME">
+            </a>
+            Stock Charting
+        </li>
+
+        <div class="dropdown" >
+            <button class="dropbtn">Company</button>
+            <div class="dropdown-content">
+                <a routerLink="company/display" routerLinkActive="active" class="nav-link">Company Details</a>
+                <a routerLink="company/create" routerLinkActive="active" class="nav-link">Add Company</a>
+            </div>
+        </div>
+
+        <div class="dropdown" >
+            <button class="dropbtn">IPO</button>
+            <div class="dropdown-content">
+                <a routerLink="company/ipo" routerLinkActive="active" class="nav-link">IPO Details</a>
+                <a routerLink="company/createIpo" routerLinkActive="active" class="nav-link">Add IPO</a>
+            </div>
+        </div>
+
+        <div class="dropdown" >
+            <button class="dropbtn">Sector</button>
+            <div class="dropdown-content">
+                <a routerLink="sector" routerLinkActive="active" class="nav-link">Sector Details</a>
+                <a routerLink="sector/createSector" routerLinkActive="active" class="nav-link">Add Sector</a>
+            </div>
+        </div>
+
+        <div class="dropdown" >
+            <button class="dropbtn">Stock</button>
+            <div class="dropdown-content">
+                <a routerLink="company/stocks" routerLinkActive="active" class="nav-link">Stocks Details</a>
+                <a routerLink="company/createStocks" routerLinkActive="active" class="nav-link">Add Stocks</a>
+                <a routerLink="stockex" routerLinkActive="active" class="nav-link">StockEx Details</a>
+                <a routerLink="stockex/create" routerLinkActive="active" class="nav-link">Create StockEx</a>
+            </div>
+        </div>
+
+        <div class="dropdown" id="right">
+            <button class="dropbtn">Account</button>
+            <div class="dropdown-content">
+            <a routerLink="home" routerLinkActive="active">Home</a>
+              <a href="#">Profile</a>
+              <a href="#">Support</a>
+              <a routerLink="login" routerLinkActive="active">Logout</a>
+            </div>
+          </div>
+
+    </ul>
+  </nav>
+  <br>
+  <h3 class="text-center">{{title}}</h3>
+  <br>
+  <div class="container">
+      <router-outlet></router-outlet>
+</div>
+
