@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Sector } from 'src/app/models/sector/sector';
 import { SectorService } from 'src/app/services/sector-service/sector.service';
 
@@ -11,7 +12,8 @@ export class SectorListComponent implements OnInit {
 
   sectorDto : Sector[];
 
-  constructor(private sectorService: SectorService) { }
+  constructor(private sectorService: SectorService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getSectorList();
@@ -21,6 +23,10 @@ export class SectorListComponent implements OnInit {
     this.sectorService.getSectorList().subscribe((data) => {
       this.sectorDto = data;
     })
+  }
+
+  updateSector(id: String){
+    this.router.navigate(['sector/editSector', id]);
   }
 
 }

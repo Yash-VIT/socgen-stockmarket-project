@@ -10,6 +10,16 @@ import { FormsModule } from '@angular/forms';
 import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 import { SectorListComponent } from './components/sector-list/sector-list/sector-list.component';
 import { StockexListComponent } from './components/stockex-list/stockex-list/stockex-list.component';
+import { UpdateCompanyComponent } from './components/update-company/update-company/update-company.component';
+import { UpdateSectorComponent } from './components/update-sector/update-sector/update-sector.component';
+import { UpdateStockexComponent } from './components/update-stockex/update-stockex/update-stockex.component';
+import { StockListComponent } from './components/stock-list/stock-list/stock-list.component';
+import { CreateIpoComponent } from './components/create-ipo/create-ipo/create-ipo.component';
+import { CreateSectorComponent } from './components/create-sector/create-sector/create-sector.component';
+import { CreateStockComponent } from './components/create-stock/create-stock/create-stock.component';
+import { CreateStockexComponent } from './components/create-stockex/create-stockex/create-stockex.component';
+import { UpdateStockComponent } from './components/update-stock/update-stock/update-stock.component';
+import { LoginComponent } from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +29,17 @@ import { StockexListComponent } from './components/stockex-list/stockex-list/sto
     CreateCompanyComponent,
     IpoListComponent,
     SectorListComponent,
-    StockexListComponent
+    StockexListComponent,
+    UpdateCompanyComponent,
+    UpdateSectorComponent,
+    UpdateStockexComponent,
+    StockListComponent,
+    CreateIpoComponent,
+    CreateSectorComponent,
+    CreateStockComponent,
+    CreateStockexComponent,
+    UpdateStockComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<div class="col-md-6 offset-md-3">
+
+    <h2>Add New IPO</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+            
+        <table class="container">
+            <tr>
+                <td>
+        <div class="form-group" id="left">
+            <label>Sector Id</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="sector.id" name="id" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <div class="form-group">
+            <label>Sector Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="sector.name" name="name" required>
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <div class="form-group" id="right">
+            <label>Brief</label>
+            <input type="text" class="form-control" id="brief" [(ngModel)]="sector.brief" name="brief">
+        </div>
+    </td>
+    
+    </tr>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </table>
+    </fieldset>
+    </form>
+

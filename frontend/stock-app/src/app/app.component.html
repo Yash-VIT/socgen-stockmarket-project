@@ -19,6 +19,7 @@
             <button class="dropbtn">IPO</button>
             <div class="dropdown-content">
                 <a routerLink="company/ipo" routerLinkActive="active" class="nav-link">IPO Details</a>
+                <a routerLink="company/createIpo" routerLinkActive="active" class="nav-link">Add IPO</a>
             </div>
         </div>
 
@@ -26,23 +27,27 @@
             <button class="dropbtn">Sector</button>
             <div class="dropdown-content">
                 <a routerLink="sector" routerLinkActive="active" class="nav-link">Sector Details</a>
+                <a routerLink="sector/createSector" routerLinkActive="active" class="nav-link">Add Sector</a>
             </div>
         </div>
 
         <div class="dropdown" >
-            <button class="dropbtn">StockEx</button>
+            <button class="dropbtn">Stock</button>
             <div class="dropdown-content">
+                <a routerLink="company/stocks" routerLinkActive="active" class="nav-link">Stocks Details</a>
+                <a routerLink="company/createStocks" routerLinkActive="active" class="nav-link">Add Stocks</a>
                 <a routerLink="stockex" routerLinkActive="active" class="nav-link">StockEx Details</a>
+                <a routerLink="stockex/create" routerLinkActive="active" class="nav-link">Create StockEx</a>
             </div>
         </div>
 
         <div class="dropdown" id="right">
             <button class="dropbtn">Account</button>
             <div class="dropdown-content">
-            <a href="#">Home</a>
+            <a routerLink="home" routerLinkActive="active">Home</a>
               <a href="#">Profile</a>
-              <a href="#">Feedback</a>
-              <a href="#">Logout</a>
+              <a href="#">Support</a>
+              <a routerLink="login" routerLinkActive="active">Logout</a>
             </div>
           </div>
 

@@ -1,18 +1,12 @@
 <div class="col-md-6 offset-md-3">
 
-    <h2>Add New Company</h2>
+    <h2>Update Company</h2>
 
     <form (ngSubmit)="onSubmit()">
         <fieldset>
             
         <table class="container">
             <tr>
-                <td>
-        <div class="form-group" id="left">
-            <label>Comapny Id</label>
-            <input type="text" class="form-control" id="id" [(ngModel)]="companyDto.id" name="id" required>
-        </div>
-    </td>
     <td>
         <div class="form-group" id="left">
             <label>Comapny Name</label>
@@ -44,7 +38,7 @@
     <td>
         <div class="form-group">
             <label>Sector</label>
-            <input type="text" class="form-control" id="sector" [(ngModel)]="companyDto.sector" name="sector">
+            <input type="sector" class="form-control" id="sector" [(ngModel)]="companyDto.sector" name="sector">
         </div>
     </td>
     </tr>

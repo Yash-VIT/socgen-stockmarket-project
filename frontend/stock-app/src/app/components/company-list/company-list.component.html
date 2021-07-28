@@ -9,6 +9,7 @@
         <th>Sector</th>
         <th>About Company</th>
         <th>Company Code</th>
+        <th>Actions</th>
     </thead>
     <tbody>
         <tr *ngFor="let company of companyDto">
@@ -20,6 +21,10 @@
             <td>{{company.sector}}</td>
             <td>{{company.writeup}}</td>
             <td>{{company.companyCode}}</td>
+            <td>
+                <button (click)="updateCompany(company.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteCompany(company.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>

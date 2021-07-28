@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sgtrain.company.dto.CompanyDto;
@@ -24,7 +25,6 @@ public class CompanyController {
 	@Autowired
 	CompanyService companyService;
 	
-	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/company/create")
 	public boolean createCompany(@RequestBody CompanyDto companyDto) {
 		return companyService.createCompany(companyDto);
